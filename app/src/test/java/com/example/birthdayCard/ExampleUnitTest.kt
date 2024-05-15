@@ -1,4 +1,4 @@
-package com.example.starter
+package com.example.birthdayCard
 
 import org.junit.Test
 

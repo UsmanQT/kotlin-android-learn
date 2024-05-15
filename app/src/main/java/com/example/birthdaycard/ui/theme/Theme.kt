@@ -1,4 +1,4 @@
-package com.example.starter.ui.theme
+package com.example.birthdayCard.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -38,7 +38,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun StarterTheme(
+fun BirthdayCardTheme(
         darkTheme: Boolean = isSystemInDarkTheme(),
         // Dynamic color is available on Android 12+
         dynamicColor: Boolean = true,

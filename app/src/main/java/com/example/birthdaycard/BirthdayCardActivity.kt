@@ -1,4 +1,4 @@
-package com.example.starter
+package com.example.birthdaycard
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,13 +15,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.starter.ui.theme.StarterTheme
+import com.example.birthdayCard.ui.theme.BirthdayCardTheme
 
-class MainActivity : ComponentActivity() {
+class BirthdayCardActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            StarterTheme {
+            BirthdayCardTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     Greeting("Usman")
@@ -51,7 +51,7 @@ fun Message(modifier: Modifier = Modifier) {
 
         Surface(color = Color.Yellow) {
             Text(
-                text = "This is my first android app. I will be adding othr components and styling them.",
+                text = "This is my first android app. I will be adding other components and styling them.",
             )
         }
     }
@@ -61,7 +61,7 @@ fun Message(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    StarterTheme {
+    BirthdayCardTheme {
         Greeting("Usman")
     }
 }
