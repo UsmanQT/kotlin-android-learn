@@ -35,8 +35,9 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         WideImage()
-                        AllTexts(textHeading = "Jetpack Compose tutorial",
-                            textBody = "Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.",
+                        AllTexts(textHeading = getString(R.string.jetpack_compose_tutorial),
+                            textBody = getString(R.string.bodytext),
+                            textBody2 = getString(R.string.bodyText2),
                             modifier = Modifier)
                     }
 
@@ -56,7 +57,7 @@ fun WideImage(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun AllTexts(textHeading: String, textBody: String, modifier: Modifier) {
+fun AllTexts(textHeading: String, textBody: String, textBody2: String, modifier: Modifier) {
     Column(
         modifier =  modifier,
     ) {
@@ -68,6 +69,11 @@ fun AllTexts(textHeading: String, textBody: String, modifier: Modifier) {
         Text(
             text = textBody,
             modifier = Modifier.padding(start = 16.dp, end = 16.dp),
+            textAlign = TextAlign.Justify
+        )
+        Text(
+            text = textBody2,
+            modifier = Modifier.padding(16.dp),
             textAlign = TextAlign.Justify
         )
     }
