@@ -14,13 +14,12 @@ To get started with this project, follow these steps:
 
 ## Features
 - **GreetingText**: Displays a greeting happy birthday message with a name.
-- **Signature**: Displays the signature of person the card is from
-
+- **GreetingImage**: Displays an image with a greeting message and a signature.
+- **Signature**: Displays the signature of the person the card is from.
 
 ## Dependencies
 This project uses the following dependencies:
 
 - [Jetpack Compose](https://developer.android.com/jetpack/compose)
 - [AndroidX libraries](https://developer.android.com/jetpack/androidx)
-
 
