@@ -13,6 +13,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -56,6 +59,19 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     }
 
 }
+
+@Composable
+fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
+    val image = painterResource(id = R.drawable.androidparty)
+    Box(modifier) {
+        Image(
+            painter = image,
+            contentDescription = null
+        )
+        GreetingText(message = "Happy Birthday Usman", from = "From Qureshi", modifier = Modifier.fillMaxSize().padding(8.dp))
+    }
+}
+
 @Preview(
     showBackground = false,
     showSystemUi = true,
@@ -64,6 +80,6 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     BirthdayCardTheme {
-        GreetingText(message = "Happy Birthday Usman", from = "From Qureshi")
+        GreetingImage(message = "Happy Birthday Usman", from = "From Qureshi")
     }
 }
