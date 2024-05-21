@@ -111,7 +111,45 @@ fun LemonApp(modifier: Modifier = Modifier) {
                     Text(stringResource(id = R.string.lemon_squeeze))
                 }
             }
-            else -> Text(text="else")
+            3 -> Surface(
+                modifier = Modifier.padding(innerPadding)
+            ) {
+                Column(
+                    modifier = modifier
+                        .fillMaxSize()
+                        .wrapContentSize(Alignment.Center),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button(onClick = { screenNumber++ }) {
+                        Image(
+                            painter = painterResource(id = R.drawable.lemon_drink),
+                            contentDescription = "drink"
+                        )
+                    }
+                    Spacer(modifier = modifier.height(20.dp))
+                    Text(stringResource(id = R.string.lemon_drink))
+                }
+            }
+            4 -> Surface(
+                modifier = Modifier.padding(innerPadding)
+            ) {
+                Column(
+                    modifier = modifier
+                        .fillMaxSize()
+                        .wrapContentSize(Alignment.Center),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Button(onClick = { screenNumber = 1 }) {
+                        Image(
+                            painter = painterResource(id = R.drawable.lemon_restart),
+                            contentDescription = "restart"
+                        )
+                    }
+                    Spacer(modifier = modifier.height(20.dp))
+                    Text(stringResource(id = R.string.lemon_restart))
+                }
+            }
+            else -> Text("error")
         }
 
     }
