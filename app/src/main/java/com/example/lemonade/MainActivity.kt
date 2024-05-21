@@ -13,7 +13,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -37,6 +39,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.res.dimensionResource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,7 +85,13 @@ fun LemonApp(modifier: Modifier = Modifier) {
                         .wrapContentSize(Alignment.Center),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Button(onClick = { screenNumber++ }) {
+                    Button(
+                        onClick = { screenNumber++ },
+                        shape = RoundedCornerShape(40.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)
+
+                    ) {
+
                         Image(
                             painter = painterResource(id = R.drawable.lemon_tree),
                             contentDescription = "tree"
@@ -101,7 +110,11 @@ fun LemonApp(modifier: Modifier = Modifier) {
                         .wrapContentSize(Alignment.Center),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Button(onClick = { screenNumber++ }) {
+                    Button(
+                        onClick = { screenNumber++ },
+                        shape = RoundedCornerShape(40.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)
+                    ) {
                         Image(
                             painter = painterResource(id = R.drawable.lemon_squeeze),
                             contentDescription = "squeeze"
@@ -120,7 +133,11 @@ fun LemonApp(modifier: Modifier = Modifier) {
                         .wrapContentSize(Alignment.Center),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Button(onClick = { screenNumber++ }) {
+                    Button(
+                        onClick = { screenNumber++ },
+                        shape = RoundedCornerShape(40.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)
+                    ) {
                         Image(
                             painter = painterResource(id = R.drawable.lemon_drink),
                             contentDescription = "drink"
@@ -139,7 +156,11 @@ fun LemonApp(modifier: Modifier = Modifier) {
                         .wrapContentSize(Alignment.Center),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Button(onClick = { screenNumber = 1 }) {
+                    Button(
+                        onClick = { screenNumber = 1 },
+                        shape = RoundedCornerShape(40.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)
+                        ) {
                         Image(
                             painter = painterResource(id = R.drawable.lemon_restart),
                             contentDescription = "restart"
