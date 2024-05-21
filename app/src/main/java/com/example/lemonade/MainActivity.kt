@@ -55,6 +55,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun LemonApp(modifier: Modifier = Modifier) {
     var screenNumber by remember { mutableStateOf(1)}
+    var squeezeTimes by remember { mutableStateOf(0)}
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -79,7 +80,10 @@ fun LemonApp(modifier: Modifier = Modifier) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Button(
-                        onClick = { screenNumber++ },
+                        onClick = {
+                            screenNumber = 2
+                            squeezeTimes = (2..4).random()
+                                  },
                         shape = RoundedCornerShape(40.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)
 
@@ -104,7 +108,11 @@ fun LemonApp(modifier: Modifier = Modifier) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Button(
-                        onClick = { screenNumber++ },
+                        onClick = {
+                            squeezeTimes--
+                            if(squeezeTimes == 0) {
+                                screenNumber = 3
+                            } },
                         shape = RoundedCornerShape(40.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)
                     ) {
