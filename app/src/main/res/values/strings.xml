@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Starter</string>
+    <string name="app_name">BirthdayCard</string>
+    <string name="happy_birthday_usman">Happy Birthday Usman</string>
+    <string name="from_qureshi">From Qureshi</string>
 </resources>
