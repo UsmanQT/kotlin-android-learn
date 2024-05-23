@@ -3,6 +3,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <style name="Theme.BirthdayCard" parent="android:Theme.Material.Light.NoActionBar" />
 =======
     <style name="Theme.BusinessCard" parent="android:Theme.Material.Light.NoActionBar" />
@@ -10,4 +11,7 @@
 =======
     <style name="Theme.ArticleApp" parent="android:Theme.Material.Light.NoActionBar" />
 >>>>>>> origin/article-app
+=======
+    <style name="Theme.DiceRoller" parent="android:Theme.Material.Light.NoActionBar" />
+>>>>>>> origin/dice-roller-app
 </resources>

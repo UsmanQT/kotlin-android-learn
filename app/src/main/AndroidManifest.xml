@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.birthdaycard">
 =======
@@ -10,6 +11,9 @@
 =======
     xmlns:tools="http://schemas.android.com/tools">
 >>>>>>> origin/article-app
+=======
+    xmlns:tools="http://schemas.android.com/tools">
+>>>>>>> origin/dice-roller-app
 
     <application
         android:allowBackup="true"
@@ -19,6 +23,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         android:theme="@style/Theme.BirthdayCard"
@@ -33,17 +38,24 @@
 =======
         android:theme="@style/Theme.ArticleApp"
 >>>>>>> origin/article-app
+=======
+        android:theme="@style/Theme.DiceRoller"
+>>>>>>> origin/dice-roller-app
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:theme="@style/Theme.BusinessCard">
 >>>>>>> origin/business-card-app
 =======
             android:theme="@style/Theme.ArticleApp">
 >>>>>>> origin/article-app
+=======
+            android:theme="@style/Theme.DiceRoller">
+>>>>>>> origin/dice-roller-app
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
