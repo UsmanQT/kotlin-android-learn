@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <string name="app_name">BirthdayCard</string>
     <string name="happy_birthday_usman">Happy Birthday Usman</string>
     <string name="from_qureshi">From Qureshi</string>
@@ -18,4 +19,11 @@
     <string name="app_name">DiceRoller</string>
     <string name="roll">Roll</string>
 >>>>>>> origin/dice-roller-app
+=======
+    <string name="app_name">Lemonade</string>
+    <string name="lemon_tree">Tap the lemon tree to select a lemon</string>
+    <string name="lemon_squeeze">Keep tapping the lemon to squeeze it</string>
+    <string name="lemon_drink">Tap the lemonade to drink it</string>
+    <string name="lemon_restart">Tap the empty glass to start again</string>
+>>>>>>> origin/lemonade-app
 </resources>
