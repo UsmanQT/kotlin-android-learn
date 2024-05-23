@@ -5,11 +5,11 @@ plugins {
 
 android {
 
-    namespace = "com.example.businesscard"
+    namespace = "com.example.articleapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.businesscard"
+        applicationId = "com.example.articleapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

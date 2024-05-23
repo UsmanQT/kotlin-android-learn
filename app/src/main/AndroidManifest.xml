@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 <<<<<<< HEAD
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.birthdaycard">
 =======
     xmlns:tools="http://schemas.android.com/tools">
 >>>>>>> origin/business-card-app
+=======
+    xmlns:tools="http://schemas.android.com/tools">
+>>>>>>> origin/article-app
 
     <application
         android:allowBackup="true"
@@ -16,6 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:theme="@style/Theme.BirthdayCard"
         tools:targetApi="31">
         <activity
@@ -25,13 +30,20 @@
             android:theme="@style/Theme.BirthdayCard">
 =======
         android:theme="@style/Theme.BusinessCard"
+=======
+        android:theme="@style/Theme.ArticleApp"
+>>>>>>> origin/article-app
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+<<<<<<< HEAD
             android:theme="@style/Theme.BusinessCard">
 >>>>>>> origin/business-card-app
+=======
+            android:theme="@style/Theme.ArticleApp">
+>>>>>>> origin/article-app
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

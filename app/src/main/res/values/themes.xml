@@ -2,8 +2,12 @@
 <resources>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <style name="Theme.BirthdayCard" parent="android:Theme.Material.Light.NoActionBar" />
 =======
     <style name="Theme.BusinessCard" parent="android:Theme.Material.Light.NoActionBar" />
 >>>>>>> origin/business-card-app
+=======
+    <style name="Theme.ArticleApp" parent="android:Theme.Material.Light.NoActionBar" />
+>>>>>>> origin/article-app
 </resources>
