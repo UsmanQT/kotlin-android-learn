@@ -1,5 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">BirthdayCard</string>
     <string name="happy_birthday_usman">Happy Birthday Usman</string>
     <string name="from_qureshi">From Qureshi</string>
+=======
+    <string name="app_name">BusinessCard</string>
+>>>>>>> origin/business-card-app
 </resources>
