@@ -4,12 +4,11 @@ plugins {
 }
 
 android {
-
-    namespace = "com.example.lemonade"
+    namespace = "com.example.tipcalculator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.lemonade"
+        applicationId = "com.example.tipcalculator"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -53,7 +52,11 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.13.1")
+<<<<<<< HEAD
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+=======
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
+>>>>>>> origin/tip-calculator
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.ui:ui")

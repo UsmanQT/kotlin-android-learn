@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <style name="Theme.BirthdayCard" parent="android:Theme.Material.Light.NoActionBar" />
 =======
     <style name="Theme.BusinessCard" parent="android:Theme.Material.Light.NoActionBar" />
@@ -18,4 +19,7 @@
 =======
     <style name="Theme.Lemonade" parent="android:Theme.Material.Light.NoActionBar" />
 >>>>>>> origin/lemonade-app
+=======
+    <style name="Theme.TipCalculator" parent="android:Theme.Material.Light.NoActionBar" />
+>>>>>>> origin/tip-calculator
 </resources>
