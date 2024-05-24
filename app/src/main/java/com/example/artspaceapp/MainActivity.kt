@@ -60,6 +60,6 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     ArtSpaceAppTheme {
-        ArtSpaceLayout("Android")
+        ArtSpaceLayout()
     }
 }
