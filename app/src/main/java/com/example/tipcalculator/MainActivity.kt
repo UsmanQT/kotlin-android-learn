@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -32,6 +33,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.input.KeyboardType
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +54,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TipTimeLayout() {
+    var inputValue by remember { mutableStateOf("") }
+    val amount = inputValue.toDoubleOrNull() ?: 0.0
+    val tip = tipCalculator(amount)
+
     Column (
         modifier = Modifier
             .statusBarsPadding()
@@ -67,24 +73,29 @@ fun TipTimeLayout() {
                 .padding(bottom = 16.dp, top = 40.dp)
                 .align(alignment = Alignment.Start)
         )
-        EditNumberField(modifier = Modifier
+        EditNumberField(
+            value = inputValue,
+            onValueChange = {inputValue = it},
+            modifier = Modifier
             .padding(bottom = 32.dp)
             .fillMaxWidth())
         Text(
-            text ="Tip Amount: $0.0",
+            text ="Tip Amount: $tip",
             style = MaterialTheme.typography.displaySmall
         )
     }
 }
 
 @Composable
-fun EditNumberField(modifier: Modifier = Modifier) {
-    var inputValue by remember { mutableStateOf("") }
+fun EditNumberField(value: String, onValueChange: (String) -> Unit, modifier: Modifier = Modifier) {
     TextField(
-        value = inputValue,
-        onValueChange = { inputValue = it},
+        value = value,
+        onValueChange = onValueChange,
         modifier = modifier,
-        label = { Text(text = "Bill Amount")}
+        label = { Text(text = "Bill Amount")},
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+
     )
 }
 
