@@ -33,6 +33,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 
 class MainActivity : ComponentActivity() {
@@ -58,6 +59,8 @@ fun TipTimeLayout() {
     val amount = inputValue.toDoubleOrNull() ?: 0.0
     val tip = tipCalculator(amount)
 
+    var tipPercentage by remember { mutableStateOf("") }
+
     Column (
         modifier = Modifier
             .statusBarsPadding()
@@ -76,9 +79,25 @@ fun TipTimeLayout() {
         EditNumberField(
             value = inputValue,
             onValueChange = {inputValue = it},
+            labelText = "Bill Amount",
+            keyboardOptions = KeyboardOptions.Default.copy(
+                keyboardType = KeyboardType.Number,
+                imeAction = ImeAction.Next
+            ),
             modifier = Modifier
             .padding(bottom = 32.dp)
             .fillMaxWidth())
+        EditNumberField(
+            value = tipPercentage,
+            onValueChange = {tipPercentage = it},
+            labelText = "Tip Percentage",
+            keyboardOptions = KeyboardOptions.Default.copy(
+                keyboardType = KeyboardType.Number,
+                imeAction = ImeAction.Done
+            ),
+            modifier = Modifier
+                .padding(bottom = 32.dp)
+                .fillMaxWidth())
         Text(
             text ="Tip Amount: $tip",
             style = MaterialTheme.typography.displaySmall
@@ -87,14 +106,14 @@ fun TipTimeLayout() {
 }
 
 @Composable
-fun EditNumberField(value: String, onValueChange: (String) -> Unit, modifier: Modifier = Modifier) {
+fun EditNumberField(value: String, onValueChange: (String) -> Unit, labelText: String, keyboardOptions: KeyboardOptions, modifier: Modifier = Modifier) {
     TextField(
         value = value,
         onValueChange = onValueChange,
         modifier = modifier,
-        label = { Text(text = "Bill Amount")},
+        label = { Text(text = labelText)},
         singleLine = true,
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+        keyboardOptions = keyboardOptions
 
     )
 }
