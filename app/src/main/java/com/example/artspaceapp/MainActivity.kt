@@ -3,6 +3,7 @@ package com.example.artspaceapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,11 +19,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.artspaceapp.ui.theme.ArtSpaceAppTheme
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +49,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceLayout(modifier: Modifier = Modifier) {
+    var count by remember {
+        mutableStateOf(0)
+    }
+
     Column (
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -50,12 +60,9 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
             .fillMaxSize()
 
     ) {
+        ImageWithText()
         Text(
-            text = "Image will be displayed here",
-            modifier = modifier
-        )
-        Text(
-            text = "Some description and credit here",
+            text = count.toString(),
             modifier = modifier
         )
         Row (
@@ -76,13 +83,19 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
                     .weight(1f)
                     .padding(horizontal = 20.dp, vertical = 20.dp)
                 ,
-                onClick = { /*TODO*/ },
+                onClick = { count++ },
             ) {
                 Text(text = "Next")
             }
         }
 
     }
+}
+
+@Composable
+fun ImageWithText() {
+    var image = painterResource(id = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024)
+    Image(painter = image, contentDescription = null)
 }
 
 @Preview(showBackground = true)
