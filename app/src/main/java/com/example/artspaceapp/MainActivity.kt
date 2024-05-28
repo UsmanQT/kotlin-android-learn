@@ -61,7 +61,7 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
     )
 
     Column (
-        verticalArrangement = Arrangement.SpaceBetween,
+        verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
             .fillMaxSize()
@@ -111,7 +111,7 @@ fun ImageWithText(item: ArtPiece, modifier: Modifier) {
         modifier = modifier.padding( vertical = 30.dp)
     ) {
         Image(painter = image, contentDescription = null)
-        Spacer(modifier = modifier.size(30.dp))
+        Spacer(modifier = modifier.size(100.dp))
         Box (
             modifier = modifier.background(color = Color.LightGray).padding(all = 30.dp)
         ){
