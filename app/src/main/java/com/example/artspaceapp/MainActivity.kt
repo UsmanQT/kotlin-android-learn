@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -29,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import com.example.artspaceapp.ui.theme.ArtSpaceAppTheme
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,30 +74,32 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
         Row (
             horizontalArrangement = Arrangement.SpaceBetween
         ){
-            Button(
-                modifier = modifier
-                    .weight(1f)
-                    .padding(horizontal = 20.dp, vertical = 20.dp)
-                ,
-                onClick = {
-                    if(count >0) {
-                    count--
-                } },
-            ) {
-                Text(text = "Previous")
+            if (count > 0) {
+                Button(
+                    modifier = modifier
+                        .weight(1f)
+                        .padding(all = 20.dp),
+                    onClick = {
+                        count--
+                    }
+                ) {
+                    Text(text = "Previous")
+                }
             }
-            Spacer(modifier = modifier.size(20.dp))
-            Button(
-                modifier = modifier
-                    .weight(1f)
-                    .padding(horizontal = 20.dp, vertical = 20.dp)
-                ,
-                onClick = {
-                    if(count < listOfArtPieces.size -1 ) {
+            if (count != 0 && count != listOfArtPieces.size -1 ) {
+                Spacer(modifier = modifier.size(20.dp))
+            }
+            if (count < listOfArtPieces.size - 1) {
+                Button(
+                    modifier = modifier
+                        .weight(1f)
+                        .padding(all = 20.dp),
+                    onClick = {
                         count++
-                } },
-            ) {
-                Text(text = "Next")
+                    }
+                ) {
+                    Text(text = "Next")
+                }
             }
         }
 
@@ -109,7 +114,12 @@ fun ImageWithText(item: ArtPiece, modifier: Modifier) {
         modifier = modifier.padding( vertical = 30.dp)
     ) {
         Image(painter = image, contentDescription = null)
-        Text(text = item.text)
+        Spacer(modifier = modifier.size(30.dp))
+        Box (
+            modifier = modifier.background(color = Color.LightGray).padding(all = 30.dp)
+        ){
+            Text(text = item.text)
+        }
     }
 
 }
