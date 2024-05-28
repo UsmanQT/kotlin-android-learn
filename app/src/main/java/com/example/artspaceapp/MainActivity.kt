@@ -13,6 +13,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -65,6 +68,7 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
 
     ) {
         ImageWithText(listOfArtPieces[count], modifier = modifier)
@@ -111,9 +115,11 @@ fun ImageWithText(item: ArtPiece, modifier: Modifier) {
         modifier = modifier.padding( vertical = 30.dp)
     ) {
         Image(painter = image, contentDescription = null)
-        Spacer(modifier = modifier.size(100.dp))
+        Spacer(modifier = modifier.size(50.dp))
         Box (
-            modifier = modifier.background(color = Color.LightGray).padding(all = 30.dp)
+            modifier = modifier
+                .background(color = Color.LightGray)
+                .padding(all = 30.dp)
         ){
             Text(text = item.text)
         }
