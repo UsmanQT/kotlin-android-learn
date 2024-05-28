@@ -54,10 +54,10 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
     }
 
     val listOfArtPieces = listOf<ArtPiece>(
-        ArtPiece(id = 1, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 1"),
-        ArtPiece(id = 2, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 2"),
-        ArtPiece(id = 3, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 3"),
-        ArtPiece(id = 4, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 4")
+        ArtPiece(id = 1, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Halima Aziz"),
+        ArtPiece(id = 2, image = R.drawable._87270127_860870888552554_7430350949524679136_n, text= "Shirien Damra"),
+        ArtPiece(id = 3, image = R.drawable.mcxrqc3y_screenshot_2023_10_18_at_1_38_01_pm_781x1024, text= "Bint Quds"),
+        ArtPiece(id = 4, image = R.drawable._e7tycwm_screenshot_2023_10_17_at_7_15_15_pm_993x1024, text= "Narmeen Hamadeh")
     )
 
     Column (
@@ -76,7 +76,10 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
                     .weight(1f)
                     .padding(horizontal = 20.dp, vertical = 20.dp)
                 ,
-                onClick = { /*TODO*/ },
+                onClick = {
+                    if(count >0) {
+                    count--
+                } },
             ) {
                 Text(text = "Previous")
             }
@@ -86,7 +89,10 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
                     .weight(1f)
                     .padding(horizontal = 20.dp, vertical = 20.dp)
                 ,
-                onClick = { count++ },
+                onClick = {
+                    if(count < listOfArtPieces.size -1 ) {
+                        count++
+                } },
             ) {
                 Text(text = "Next")
             }
@@ -100,6 +106,7 @@ fun ImageWithText(item: ArtPiece, modifier: Modifier) {
     val image = painterResource(id = item.image)
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier.padding( vertical = 30.dp)
     ) {
         Image(painter = image, contentDescription = null)
         Text(text = item.text)
