@@ -53,6 +53,13 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
         mutableStateOf(0)
     }
 
+    val listOfArtPieces = listOf<ArtPiece>(
+        ArtPiece(id = 1, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 1"),
+        ArtPiece(id = 2, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 2"),
+        ArtPiece(id = 3, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 3"),
+        ArtPiece(id = 4, image = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024, text= "Text 4")
+    )
+
     Column (
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -60,11 +67,7 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
             .fillMaxSize()
 
     ) {
-        ImageWithText()
-        Text(
-            text = count.toString(),
-            modifier = modifier
-        )
+        ImageWithText(listOfArtPieces[count], modifier = modifier)
         Row (
             horizontalArrangement = Arrangement.SpaceBetween
         ){
@@ -93,9 +96,15 @@ fun ArtSpaceLayout(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun ImageWithText() {
-    var image = painterResource(id = R.drawable.aucuepbu_screenshot_2023_10_18_at_12_47_26_pm_811x1024)
-    Image(painter = image, contentDescription = null)
+fun ImageWithText(item: ArtPiece, modifier: Modifier) {
+    val image = painterResource(id = item.image)
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Image(painter = image, contentDescription = null)
+        Text(text = item.text)
+    }
+
 }
 
 @Preview(showBackground = true)
