@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <string name="app_name">BirthdayCard</string>
     <string name="happy_birthday_usman">Happy Birthday Usman</string>
     <string name="from_qureshi">From Qureshi</string>
@@ -30,4 +31,7 @@
 =======
     <string name="app_name">TipCalculator</string>
 >>>>>>> origin/tip-calculator
+=======
+    <string name="app_name">ArtSpaceApp</string>
+>>>>>>> origin/art-space-app
 </resources>

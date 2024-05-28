@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TipCalculator"
+rootProject.name = "ArtSpaceApp"
 include(":app")
  
