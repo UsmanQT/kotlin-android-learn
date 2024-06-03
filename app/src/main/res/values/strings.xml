@@ -1,37 +1,14 @@
 <resources>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <string name="app_name">BirthdayCard</string>
-    <string name="happy_birthday_usman">Happy Birthday Usman</string>
-    <string name="from_qureshi">From Qureshi</string>
-=======
-    <string name="app_name">BusinessCard</string>
->>>>>>> origin/business-card-app
-=======
-    <string name="app_name">ArticleApp</string>
-    <string name="jetpack_compose_tutorial">Jetpack Compose tutorial</string>
-    <string name="bodytext">Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.</string>
-    <string name="bodyText2">In this tutorial, you build a simple UI component with declarative functions. You call Compose functions to say what elements you want and the Compose compiler does the rest. Compose is built around Composable functions. These functions let you define your app\\\'s UI programmatically because they let you describe how it should look and provide data dependencies, rather than focus on the process of the UI\\\'s construction, such as initializing an element and then attaching it to a parent. To create a Composable function, you add the @Composable annotation to the function name.</string>
->>>>>>> origin/article-app
-=======
-    <string name="app_name">DiceRoller</string>
-    <string name="roll">Roll</string>
->>>>>>> origin/dice-roller-app
-=======
-    <string name="app_name">Lemonade</string>
-    <string name="lemon_tree">Tap the lemon tree to select a lemon</string>
-    <string name="lemon_squeeze">Keep tapping the lemon to squeeze it</string>
-    <string name="lemon_drink">Tap the lemonade to drink it</string>
-    <string name="lemon_restart">Tap the empty glass to start again</string>
->>>>>>> origin/lemonade-app
-=======
-    <string name="app_name">TipCalculator</string>
->>>>>>> origin/tip-calculator
-=======
-    <string name="app_name">ArtSpaceApp</string>
->>>>>>> origin/art-space-app
+    <string name="app_name">affirmationApp</string>
+    <string name="affirmation1">I am strong.</string>
+    <string name="affirmation2">I believe in myself.</string>
+    <string name="affirmation3">Each day is a new opportunity to grow and be a better version of myself.</string>
+    <string name="affirmation4">Every challenge in my life is an opportunity to learn from.</string>
+    <string name="affirmation5">I have so much to be grateful for.</string>
+    <string name="affirmation6">Good things are always coming into my life.</string>
+    <string name="affirmation7">New opportunities await me at every turn.</string>
+    <string name="affirmation8">I have the courage to follow my heart.</string>
+    <string name="affirmation9">Things will unfold at precisely the right time.</string>
+    <string name="affirmation10">I will be present in all the moments that this day brings.</string>
+>>>>>>> origin/affirmations-app
 </resources>

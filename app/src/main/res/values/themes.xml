@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <style name="Theme.BirthdayCard" parent="android:Theme.Material.Light.NoActionBar" />
 =======
     <style name="Theme.BusinessCard" parent="android:Theme.Material.Light.NoActionBar" />
@@ -26,4 +19,7 @@
 =======
     <style name="Theme.ArtSpaceApp" parent="android:Theme.Material.Light.NoActionBar" />
 >>>>>>> origin/art-space-app
+=======
+    <style name="Theme.AffirmationApp" parent="android:Theme.Material.Light.NoActionBar" />
+>>>>>>> origin/affirmations-app
 </resources>

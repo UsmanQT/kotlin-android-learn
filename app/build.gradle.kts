@@ -5,6 +5,7 @@ plugins {
 
 android {
 <<<<<<< HEAD
+<<<<<<< HEAD
     namespace = "com.example.tipcalculator"
     compileSdk = 34
 
@@ -17,6 +18,13 @@ android {
     defaultConfig {
         applicationId = "com.example.artspaceapp"
 >>>>>>> origin/art-space-app
+=======
+    namespace = "com.example.affirmationapp"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.example.affirmationapp"
+>>>>>>> origin/affirmations-app
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -62,6 +70,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 =======
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
@@ -69,6 +78,9 @@ dependencies {
 =======
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
 >>>>>>> origin/art-space-app
+=======
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
+>>>>>>> origin/affirmations-app
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.ui:ui")
