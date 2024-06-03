@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-
+    compileSdk = 34
     defaultConfig {
         applicationId = "com.example.affirmationapp"
         minSdk = 24
