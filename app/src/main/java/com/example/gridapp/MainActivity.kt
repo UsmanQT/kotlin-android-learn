@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -12,6 +13,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -31,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import com.example.gridapp.data.DataSource
 import com.example.gridapp.data.Topic
 import com.example.gridapp.ui.theme.GridAppTheme
+import androidx.compose.foundation.lazy.grid.items
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,13 +58,19 @@ fun GridApp() {
 
 @Composable
 fun GridItemCard (modifier: Modifier = Modifier, topic: Topic) {
-    Card(modifier = modifier) {
+    Card(
+        modifier = modifier
+            .height(68.dp)
+    ) {
         Row {
             Image(
                 painter = painterResource(id = topic.topicImage),
                 contentDescription = null,
                 )
-            Column {
+            Column (
+
+
+            ) {
                 Text(
                     text = stringResource(id = topic.topicId)
                 )
@@ -77,14 +87,15 @@ fun GridItemCard (modifier: Modifier = Modifier, topic: Topic) {
 }
 
 @Composable
-fun ItemsList(topicsList: List<Topic>) {
-    LazyColumn {
+fun ItemsList(topicsList: List<Topic>,modifier: Modifier = Modifier) {
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(2),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        modifier = modifier
+    ) {
         items(topicsList) { topic ->
-            GridItemCard(
-                topic = topic,
-                modifier = Modifier.padding(8.dp)
-            )
-
+            GridItemCard(modifier, topic)
         }
     }
 }
