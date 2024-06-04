@@ -4,14 +4,15 @@ plugins {
 }
 
 android {
+    namespace = "com.example.gridapp"
     compileSdk = 34
+
     defaultConfig {
-        applicationId = "com.example.affirmationapp"
+        applicationId = "com.example.gridapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -48,6 +49,7 @@ android {
 }
 
 dependencies {
+
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
     implementation("androidx.activity:activity-compose:1.9.0")

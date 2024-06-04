@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <style name="Theme.BirthdayCard" parent="android:Theme.Material.Light.NoActionBar" />
 =======
     <style name="Theme.BusinessCard" parent="android:Theme.Material.Light.NoActionBar" />
@@ -22,4 +23,8 @@
 =======
     <style name="Theme.AffirmationApp" parent="android:Theme.Material.Light.NoActionBar" />
 >>>>>>> origin/affirmations-app
+=======
+
+    <style name="Theme.GridApp" parent="android:Theme.Material.Light.NoActionBar" />
+>>>>>>> origin/grid-app
 </resources>

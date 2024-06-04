@@ -13,6 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "affirmationApp"
+
+rootProject.name = "GridApp"
 include(":app")
  

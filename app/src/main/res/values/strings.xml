@@ -1,4 +1,5 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">affirmationApp</string>
     <string name="affirmation1">I am strong.</string>
     <string name="affirmation2">I believe in myself.</string>
@@ -11,4 +12,21 @@
     <string name="affirmation9">Things will unfold at precisely the right time.</string>
     <string name="affirmation10">I will be present in all the moments that this day brings.</string>
 >>>>>>> origin/affirmations-app
+=======
+    <string name="app_name">GridApp</string>
+    <string name="architecture">Architecture</string>
+    <string name="crafts">Crafts</string>
+    <string name="business">Business</string>
+    <string name="culinary">Culinary</string>
+    <string name="design">Design</string>
+    <string name="fashion">Fashion</string>
+    <string name="film">Film</string>
+    <string name="gaming">Gaming</string>
+    <string name="drawing">Drawing</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="music">Music</string>
+    <string name="painting">Painting</string>
+    <string name="photography">Photography</string>
+    <string name="tech">Tech</string>
+>>>>>>> origin/grid-app
 </resources>

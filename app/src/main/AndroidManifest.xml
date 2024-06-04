@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.birthdaycard">
 =======
@@ -30,6 +31,9 @@
 =======
     xmlns:tools="http://schemas.android.com/tools">
 >>>>>>> origin/affirmations-app
+=======
+    xmlns:tools="http://schemas.android.com/tools">
+>>>>>>> origin/grid-app
 
     <application
         android:allowBackup="true"
@@ -39,6 +43,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,11 +78,15 @@
 =======
         android:theme="@style/Theme.AffirmationApp"
 >>>>>>> origin/affirmations-app
+=======
+        android:theme="@style/Theme.GridApp"
+>>>>>>> origin/grid-app
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,6 +113,9 @@
 =======
             android:theme="@style/Theme.AffirmationApp">
 >>>>>>> origin/affirmations-app
+=======
+            android:theme="@style/Theme.GridApp">
+>>>>>>> origin/grid-app
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
