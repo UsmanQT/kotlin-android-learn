@@ -1,30 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <style name="Theme.BirthdayCard" parent="android:Theme.Material.Light.NoActionBar" />
-=======
-    <style name="Theme.BusinessCard" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/business-card-app
-=======
-    <style name="Theme.ArticleApp" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/article-app
-=======
-    <style name="Theme.DiceRoller" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/dice-roller-app
-=======
-    <style name="Theme.Lemonade" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/lemonade-app
-=======
-    <style name="Theme.TipCalculator" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/tip-calculator
-=======
-    <style name="Theme.ArtSpaceApp" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/art-space-app
-=======
-    <style name="Theme.AffirmationApp" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/affirmations-app
-=======
-
     <style name="Theme.GridApp" parent="android:Theme.Material.Light.NoActionBar" />
->>>>>>> origin/grid-app
 </resources>
